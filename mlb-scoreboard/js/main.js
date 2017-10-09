@@ -314,8 +314,7 @@ function goBack() {
     $.ajax({
         url: URL,
         success: function(payload) {
-            var dateArr = payload.data.games.game[0].original_date;
-            var dateArr = dateArr.split('/');
+            var dateArr = payload.subject.slice(22,33).split('_');
             sessionStorage.setItem('dateArr', dateArr);
             console.log(dateArr);
             window.location = 'index.html';
