@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!html>
+
+  <head>
+      <meta charset="utf-8">
+      <title>MLB scoreboard</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  </head>
+  <body>
+      <h3 align="center">MLB Scoreboard</h3>
+      <div>
+          <table id="date-layout">
+              <tr>
+                  <td id="previous"><a href="" class="date">&lt;</a></td>
+                  <td id="dateInput"><input type="text" id="datepicker"></td>
+                  <td id="dateInput"><input type="text" id="alt-date"></td>
+                  <td id="next"><a href="" class="date">&gt;</a></td>
+              </tr>
+          </table>
+          <table id="scoreboard">
+          </table>
+      </div>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+          getInfo();
+      </script>
+  </body>
+</html>

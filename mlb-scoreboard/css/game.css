@@ -1,0 +1,100 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  width: 35%;
+  text-align: left;
+  padding: .6em .6em .6em .6em;
+}
+
+.right {
+  text-align: right;
+  padding: .6em .6em .6em 0em;
+}
+
+.batleft {
+  width: 35%;
+  text-align: left;
+  padding: 0em .6em 0em .6em;
+}
+
+.batright {
+  text-align: right;
+  padding: 0em .6em 0em 1em;
+}
+
+.tablesize {
+  margin: auto;
+  background-color: black;
+  color: white;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  width: 24em;
+}
+
+#tb1 {
+  border: 1px solid white;
+}
+
+#tb2 {
+  border: 1px solid white;
+  border-bottom: none;
+  border-top: none;
+}
+
+#tb3 {
+  border: 1px solid white;
+  border-bottom: none;
+  border-top: none;
+}
+
+#tb4 {
+  border: 1px solid white;
+  border-top: none;
+}
+
+tr {
+  width: 100%;
+}
+
+td:visited {
+  font-weight: bold;
+}
+
+#hfn:hover,
+#afn:hover {
+  background: #4d4d4d;
+  cursor: pointer;
+}
+
+#hfn,
+#afn {
+  text-align: center;
+  padding: .6em .6em .6em .6em;
+}
+
+.topleft {
+  text-align: center;
+  width: 7em;
+  padding: 0em .6em 0em .6em;
+}
+
+.topright {
+  padding: 0em .4em 0em .6em;
+}
+
+.innertable {
+  padding: 0em .2em 0em .2em;
+  border-style: none;
+}
+
+#butdiv {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  margin: 0 auto;
+}

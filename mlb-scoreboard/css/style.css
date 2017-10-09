@@ -1,0 +1,92 @@
+#scoreboard {
+  height: 30em;
+  overflow-y: scroll;
+  display: block;
+}
+
+#date-layout {
+  display: block;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+table {
+  width: 20em;
+  margin: auto;
+  background-color: black;
+  color: white;
+  border-collapse: collapse;
+  border: 1px solid white;
+  font-family: sans-serif;
+}
+
+tr {
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+
+td, th {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#left {
+  text-align: left;
+  padding: .6em .6em .6em .6em;
+}
+
+#right {
+  text-align: right;
+  padding: 0em .6em 1em .6em;
+}
+
+li {
+  list-style: none;
+  padding-top: .2em;
+}
+
+#previous {
+  text-align: right;
+  padding: .6em .6em .6em 2em;
+  width: 10%;
+}
+
+#next {
+  text-align: left;
+  padding: .6em 2.2em .6em .6em;
+  width: 10%;
+}
+
+#dateInput {
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+
+input {
+  text-align: center;
+  width: 100%;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 12pt;
+  font-family: sans-serif;
+}
+
+tr:hover {
+  background: #4d4d4d;
+  cursor: pointer;
+}
+
+#p {
+  text-align: center;
+}
+
+#winner {
+  font-weight: bolder;
+}
