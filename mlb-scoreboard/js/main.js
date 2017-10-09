@@ -242,6 +242,11 @@ function getGame() {
             //Displays home and away team's full name in the center of the detail page
             document.getElementById('hfn').innerHTML = payload.data.boxscore.home_fname;
             document.getElementById('afn').innerHTML = payload.data.boxscore.away_fname;
+        },
+
+        error: function(XMLHttpRequest) {
+        document.getElementById('outtertb').innerHTML = '';
+        document.getElementById('errtd').innerHTML = '<br/>No results yet!<br/><br/><br/><br/>';
         }
     });
 }

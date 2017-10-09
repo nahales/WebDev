@@ -98,3 +98,18 @@ button {
   text-align: center;
   margin: 0 auto;
 }
+
+#errtb {
+  margin: auto;
+  background-color: black;
+  color: white;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  width: 24em;
+}
+
+#errtd{
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+}
