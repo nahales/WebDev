@@ -6,7 +6,7 @@ function getInfo() {
         altField: "#alt-date"
     });
 
-    //Gets one of the session's items
+    //Gets dateArr item from sesssionStorage which has been set in goBack() function
     var dateArr = sessionStorage.getItem('dateArr');
 
     //If user is coming back from game datails, loads page with the previous selected date
@@ -75,7 +75,7 @@ function updateScoreboard() {
 
 //Creates ajax url with date Array, gets data from API, creates and displays a table of games
 function getGames(dateArr) {
-    sessionStorage.clear(); //Clear sessions
+    sessionStorage.clear(); //Clear dateArr from session storage
     var year = dateArr[0];
     var month = dateArr[1];
     var day = dateArr[2];
