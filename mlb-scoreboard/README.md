@@ -43,15 +43,8 @@ Bonus Points
 
 Allow for a different team, other than the Blue Jays to be selected as the favourite
 Dig through the MLB API figure out what other kinds of features you can add (ex. scoreboard, or stats)
-What we're looking for
-
-Completion - obviously this is a factor, we'd like to see you finish the tasks above
-Approach - there are a number of ways to tackle each individual problem, let's see how you think!
-Code quality - try to be on your best behaviour here in regards to comments, neatness, and other standard good coding practices
-Test Cases
 
 Make sure your app can handle these dates
-
 October 29th, 2014
 March 29th, 2014
 July 15th, 2014
