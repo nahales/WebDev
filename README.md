@@ -33,4 +33,6 @@ Take a look at this example for reference on how to layout the first screen of t
 
 Allow for a different team, other than the Blue Jays to be selected as the favourite Dig through the MLB API figure out what other kinds of features you can add (ex. scoreboard, or stats)
 
-Make sure your app can handle these dates October 29th, 2014 March 29th, 2014 July 15th, 2014 July 14th, 2014 Good Luck!
+Make sure your app can handle these dates October 29th, 2014 March 29th, 2014 July 15th, 2014 July 14th, 2014 
+
+Good Luck!
