@@ -5,7 +5,7 @@ function getInfo() {
         altFormat: "yy-mm-dd",
         altField: "#alt-date"
     });
-
+    
     //Gets dateArr item from sesssionStorage which has been set in goBack() function
     var dateArr = sessionStorage.getItem('dateArr');
 
