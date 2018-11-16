@@ -1,0 +1,91 @@
+{
+  "first_name": "Nahal",
+  "last_name": "Esmaeili",
+  "occupation": "Web Developer",
+  "technical_skills":[
+    {
+      "category": "Front_End Development",
+      "name": "JavaScript"
+    },
+    {
+      "category": "Front_End Development",
+      "name": "React"
+    },
+    {
+      "category": "Front_End Development",
+      "name": "SASS"
+    },
+    {
+      "category": "Front_End Development",
+      "name": "Bootstrap"
+    },
+    {
+      "category": "Front_End Development",
+      "name": "HTML5"
+    },
+    {
+      "category": "Front_End Development",
+      "name": "CSS3"
+    },
+    {
+      "category": "Back_End Development",
+      "name": "Node.js"
+    },
+    {
+      "category": "Back_End Development",
+      "name": "Express.js"
+    },
+    {
+      "category": "Back_End Development",
+      "name": "REST API"
+    },
+    {
+      "category": "Database Programming",
+      "name": "MySQL"
+    },
+    {
+      "category": "Database Programming",
+      "name": "Oracle"
+    },
+    {
+      "category": "Database Programming",
+      "name": "MangoDB"
+    },
+    {
+      "category": "Database Programming",
+      "name": "PostgreSQL"
+    },
+    {
+      "category": "Database Programming",
+      "name": "IBM DB2"
+    },
+    {
+      "category": "DevOps",
+      "name": "Git"
+    },
+    {
+      "category": "DevOps",
+      "name": "Docker"
+    },
+    {
+      "category": "Cloud",
+      "name": "Microsoft Azure"
+    },
+    {
+      "category": "Cloud",
+      "name": "Amazon AWS"
+    },
+  ],
+  "soft_skills": ["Tema Player", "Self-Motivator", "Positive Attitude", "Goal-Oriented"],
+  "education": [
+    {"college": "Seneca College", "major": "Computer Programmer", "country": "Canada", "city": "Toronto"},
+    {"college": "Karaj Azad University", "major": "Computer Engineering", "country": "Iran", "city": "Karaj"}
+  ],
+  "experience": [
+    {"title": "Junior Developer", "company": "NATIONAL Public Relations", "country": "Canada"},
+    {"title": "Network Engineer", "company": "Asiatech Co.", "country": "Iran"},
+    {"title": "Network Technician", "company": "Asiatech Co.", "country": "Iran"}
+  ],
+  "languages": ["English", "Persian"],
+  "hobbies": ["Reading tech articles", "Working out", "Swimming", "Watchning movies", "travelling"]
+}
