@@ -1,7 +1,8 @@
 Technical Questions:
 1.	How long did you spend on the coding test? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
 
-10 hours in total. I spent 4 hours for coding the application in react and styling it which works properly. 
+10 hours in total. 
+I spent 4 hours for coding the application in react and styling it which works properly. 
 I spent 6 hours for testing part. Because unfortunately, something’s wrong with my Jest and Babel modules that didn’t allow me to run my test code. I think my test code is right, however I couldn’t run it to make sure. If I had more time, I would fix my Jest’s problem and would make sure my test code works fine.
 Also, if I had more time I would add react-json-table to display the result in a nice tabular format.
 
