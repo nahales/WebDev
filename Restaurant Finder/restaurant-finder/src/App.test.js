@@ -9,7 +9,7 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-/*describe('App', () => {
+describe('App', () => {
   describe('getRestaurants', () => {
     it('can fetch data from API', async () => {
       const response = await asyncFetch('http://opentable.herokuapp.com/api/restaurants?city=toronto');
@@ -40,4 +40,4 @@ it('renders without crashing', () => {
       expect(renderedComponent.state('error')).toEqual('Error fetching restaurants');
     })
   })
-})*/
+})
