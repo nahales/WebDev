@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <title>RES PUBLICA - Signature Builder / Générateur de signatures</title>
+    <link rel="icon" type="image/png" href="/images/fav.png" />
+    <meta name="viewport" content="initial-scale=0.8">
+</head>
+<body id="landingPage">
+
+
+<!-- ********************************* MAIN PAGE END ******************************************* -->
+
+
+<div id="logoWrap">
+  <h1><span class="header">Select / Sélectionnez:</span></h1>
+</div>
+
+<div id="mobileDetected" style="display:none;">
+    <img src="images/mobile-detect.png" height="128" width="128"><br><br>
+    <img src="images/logo-res-publica.png" width="254" height="30">
+    <br>
+    <p>Nous avons détecté un appareil mobile. Pour utiliser cet outil, veuillez consulter le site Web à partir de votre ordinateur au bureau ou votre ordinateur portable.</p>
+    <p>Mobile device detected.  To use this tool, please visit this website on your laptop or desktop computer.</p>
+    <div id="closeMobileDetect">OK / D'accord</div>
+</div>
+
+<br><br><br><br><br>
+<center>
+<div id="resPublicaSelect">
+  <img src="images/logo-res-publica.png" width="254" height="30"><br>
+  <a id="resPublicaEn" class="langSelect" href="#" onclick="setLangCom('en', 'resPublica')">EN</a>
+  <a id="resPublicaFr" class="langSelect" href="#" onclick="setLangCom('fr', 'resPublica')">FR</a>
+</div>
+
+<div id="nationalSelect">
+  <img src="images/logo.png" width="300" height="31"><br>
+  <a id="nationalEn" class="langSelect" href="#" onclick="setLangCom('en', 'national')">EN</a>
+  <a id="nationalFr" class="langSelect" href="#" onclick="setLangCom('fr', 'national')">FR</a>
+</div>
+
+<div id="equicomSelect">
+  <img src="images/logo-national-equicom.png" width="401" height="50"><br>
+  <a id="nationalEquicomEn" class="langSelect" href="#" onclick="setLangCom('en', 'nationalEquicom')">EN</a>
+  <a id="nationalEquicomFr" class="langSelect" href="#" onclick="setLangCom('fr', 'nationalEquicom')">FR</a>
+</div>
+
+<div id="axonSelect" style="padding: 40px 10px;">
+   <a id="axonEn" href="#" onclick="setLangCom('en', 'axon')">
+     <img src="images/axon-logo-white.png" width="300" height="68" alt="Axon" title="Axon" style="max-width: 200px; height: auto;"></a>
+</div>
+
+<div id="madanoSelect" style="padding: 40px 10px;">
+   <a id="madanoEn" href="#" onclick="setLangCom('en', 'madano')">
+    <img src="images/madano-logo.png" width="300" height="64" alt="Madano" title="Madano" style="max-width: 212px; height: auto;"></a><br>
+
+
+</div>
+
+</center>
+
+
+
+
+<!-- ********************************* SCRIPTS START ******************************************* -->
+  <script src="scripts/clipboard.min.js"></script>
+  <script>
+    var clipboard = new Clipboard('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>
+    $(document).ready(function(){
+    });
+  </script>
+<!-- ********************************* SCRIPTS END ******************************************* -->
+
+</body>
+</html>

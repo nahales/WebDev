@@ -1,0 +1,353 @@
+<!--?php
+if(isset($_POST['submit'])){
+
+    $to = $_POST['emailInput']; // this is your Email address
+    $from = "RES PUBLICA Signature <donotreply@respublica.ca>"; // this is the sender's Email address
+    // $first_name = $_POST['first_name'];
+    // $last_name = $_POST['last_name'];
+    $subject = "Signature Setup - Select full contents of the email and copy";
+    // $subject2 = "Copy of your form submission";
+    $message = $_POST['emailContent'];
+    $natname = $_POST['nameInput'];
+    $email = $_POST['emailInput'];
+    // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+
+    // $headers2 = "From:" . $to;
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "From:" . $from;
+    mail($to,$subject,$message,$headers,$from);
+    }
+?-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <title>NATIONAL - Signature Builder</title>
+    <link rel="icon" type="image/png" href="images/fav.png" />
+    <meta name="viewport" content="initial-scale=0.8">
+</head>
+<body class="national english">
+
+<!-- ********************************* PRELOAD STARTS ******************************************* -->
+
+<div id="preload">
+    <img src="images/view.png" height="1" width="1">
+    <img src="images/close.png" height="1" width="1">
+    <img src="images/twitter-pop.png" height="1" width="1">
+    <img src="images/linkedin-pop.png" height="1" width="1">
+    <img src="images/1.png" height="1" width="1">
+    <img src="images/2.png" height="1" width="1">
+    <img src="images/3.png" height="1" width="1">
+    <img src="images/4.png" height="1" width="1">
+    <img src="images/5.png" height="1" width="1">
+
+    <img src="images/step1.png" height="1" width="1">
+    <img src="images/step1-mac.png" height="1" width="1">
+    <img src="images/step2.png" height="1" width="1">
+    <img src="images/step2-mac.png" height="1" width="1">
+    <img src="images/step3.png" height="1" width="1">
+    <img src="images/step3-mac.png" height="1" width="1">
+    <img src="images/step4.png" height="1" width="1">
+    <img src="images/step4-mac.png">
+    <img src="images/step3-reply.png">
+    <img src="images/step3-reply-mac.png">
+    <img src="images/step4-reply.png">
+    <img src="images/step4-reply-mac.png">
+</div>
+<!-- ********************************* PRELOAD END ******************************************* -->
+
+<!-- ********************************* PROGRESS START ******************************************* -->
+
+<div id="progressNav">
+    <div id="progressOne" class="complete"></div>
+    <div id="progressTwo"></div>
+    <div id="progressThree"></div>
+    <div id="progressFour"></div>
+    <div id="progressFive"></div>
+    <div id="progressSix"></div>
+</div>
+
+<!-- ********************************* PROGRESS END ******************************************* -->
+
+<!-- ********************************* POPUPS START ******************************************* -->
+
+<div id="copyError" class="instructions popup"><div><span class="popTitle">Oops! Looks like your browser is out of date!<br><br>Please Click <span id="copyDetectkey">CTRL + C</span> before moving on to the next step...</span><div class="backBtn"></div></div></div>
+<div id="mobileDetected" style="display:none;">
+    <img src="images/mobile-detect.png" height="128" width="128"><br><br>
+    <img src="images/logo-res-publica.png" width="254" height="30">
+    <br>
+    <p>Mobile device detected.  To use this tool, please visit this website on your laptop or desktop computer.</p>
+    <div id="closeMobileDetect">OK</div>
+</div>
+<div id="twitterPop" class="popup"></div>
+<div id="linkedinPop" class="popup"></div>
+<div id="stepOneCont" class="instructions popup"><div><div class="backBtn"></div></div></div>
+<div id="stepTwoCont" class="instructions popup"><div><div class="backBtn"></div></div></div>
+<div id="stepThreeCont" class="instructions popup"><div><div class="backBtn"></div></div></div>
+<div id="stepFourCont" class="instructions popup"><div><div class="backBtn"></div></div></div>
+<div id="stepThreeContReply" class="instructions popup"><div><div class="backBtn"></div></div></div>
+<div id="stepFourContReply" class="instructions popup"><div><div class="backBtn"></div></div></div>
+<div id="afterCopy" class="popup">
+
+    <div id="errorPop" class="afterCopyPop">
+        <div class="closeBtn"></div>
+        <div id="errorPopHeader" class="popTitle errorTitle"></div>
+        <div class="validationErrors">
+          <span id="nameError"></span>
+          <span id="positionError"></span>
+          <span id="phoneError"></span>
+          <span id="faxError"></span>
+          <span id="twitterError"></span>
+          <span id="cellError"></span>
+          <span id="linkedinError"></span>
+        </div>
+      </div>
+
+      <div id="stepsPop" class="afterCopyPop">
+          <div class="closeBtn"></div>
+          <span id="stepsHeader" class="popTitle"></span>
+          <div id="stepOne" class="step"><span></span><div class="viewImg"></div></div>
+          <div id="stepTwo" class="step"><span></span><div class="viewImg"></div></div>
+          <div id="stepThree" class="step"><span></span><div class="viewImg"></div></div>
+          <div id="stepFour" class="step"><span></span></div>
+          <div id="stepFive" class="step"><span></span><div class="viewImg"></div></div>
+          <br>
+          <div class="divider"></div>
+          <p id="stepsHeader2" class="popTitle2"></p>
+          <div id="stepSix" class="step"><div id="stepsBtn" class="afterCopyBtn btn"></div></div>
+      </div>
+
+      <div id="replyPop" class="afterCopyPop offScreen">
+          <div id="replyCloseBtn" class="closeBtn"></div>
+           <span id="replyHeader" class="popTitle">Setup your reply</span>
+           <p><strong>NOTE: </strong><span id="replyNote"></span></p>
+           <div id="replySelectPhone" class="replyPhoneToggleCont"></div>
+
+          <div id="replyCopy">
+            <div id="replyName"></div>
+            <div id="replyPosition"></div>
+            <div id="replyPhoneSections"></div>
+          </div>
+
+          <!--style type="text/css">
+          html, body, div, span, a, p {
+          font-family: Calibri, Arial, Sans-Serif !important;
+          text-decoration:none!important;
+          }
+        </style-->
+
+        <button id="replyBtn" class="afterCopyBtn btn" data-clipboard-action="copy" data-clipboard-target="#replyCopy">Click here to confirm reply</button>
+    </div>
+
+    <div id="replyStepsPop" class="afterCopyPop offScreen">
+        <div class="closeBtn"></div>
+        <div id="replyStepOne" class="step"><span></span><div class="viewImg"></div></div>
+        <div id="replyStepTwo" class="step"><span></span><div class="viewImg"></div></div>
+        <div id="replyStepThree" class="step"><span></span><div class="viewImg"></div></div>
+        <div id="replyStepFour" class="step"><span></span></div>
+        <div id="replyStepFive" class="step"><span></span><div class="viewImg"></div></div>
+        <div class="divider"></div>
+        <p id="replyStepsHeader2" class="popTitle2"></p>
+        <button id="replyStepsBtn" class="afterCopyBtn btn"></button>
+    </div>
+
+    <div id="preMobilePop" class="afterCopyPop offScreen">
+      <div class="closeBtn"></div>
+      <div id="preMobileHeader" class="popTitle"></div>
+      <p><strong>NOTE: </strong><span id="preMobileNote"></span></p>
+      <br/>
+      <div class="divider"></div>
+      <button id="preMobileBtn" class="afterCopyBtn btn"></button>
+    </div>
+
+    <div id="mobilePop" class="afterCopyPop offScreen">
+      <div class="closeBtn"></div>
+      <div id="mobileHeader" class="popTitle"></div>
+      <br/>
+      <div id="selectDevice">
+        <input id="iPhoneBtn" class="imageBtn" type="image" src="images/iPhone-new.png" title="Select iPhone" alt="Select iPhone"/>
+        <input id="SamsungBtn" class="imageBtn" type="image" src="images/Samsung-new.png" title="Select Samsung" alt="Select Samsung">
+        <input id="BlackBerryBtn" class="imageBtn" type="image" src="images/BlackBerry-new.png" title="Select BlackBerry" alt="Select BlackBerry">
+      </div>
+
+    </div>
+
+    <div id="samsungPop" class="afterCopyPop offScreen">
+      <div class="closeBtn"></div>
+      <div id="samsungHeader" class="popTitle"></div>
+      <br/>
+      <p><strong>NOTE: </strong><span id="samsungNote"></span></p>
+      <br/>
+      <div id="selectEmailApp">
+        <input id="samsungRadio1" type="radio" name="samsungEmailApp" value="defaultEmailApp">
+        <label id="samsungRadio1Label" class="radio" for="samsungRadio1"></label><br/>
+        <input id="samsungRadio2" type="radio" name="samsungEmailApp" value="otherEmailApp" checked>
+        <label id="samsungRadio2Label" class="radio" for="samsungRadio2"></label><br/><br/>
+      </div><br/>
+      <div class="divider"></div>
+      <button id="samsungBtn" class="afterCopyBtn btn"></button>
+    </div>
+
+
+    <div id="emailPop" class="afterCopyPop offScreen">
+      <div class="closeBtn"></div>
+      <div id="emailHeader" class="popTitle"></div>
+      <p id="emailNote"></p>
+      <br/>
+        <form action="http://respublicasignatures.ca:8090/contact" method="post">
+          <div id="emailIn"><input id="emailInput" name="emailInput" placeholder=""/></div>
+          <div id="emailError"></div>
+          <textarea id="hiddenInput" name="emailContent" rows="5" cols="30"></textarea><br>
+          <input type="submit" name="submit" value="Submit" id="submitClickMobile">
+        </form>
+      <br/>
+      <div class="divider"></div>
+      <button id="emailBtn" class="afterCopyBtn btn"></button>
+    </div>
+
+    <div id="mobileInstructionPop" class="afterCopyPop offScreen">
+      <div class="closeBtn"></div>
+      <div id="mobileInstructionHeader" class="popTitle"></div>
+      <p><strong>NOTE: </strong><span id="mobileInstructionNote"></span></p>
+      <br/>
+      <p id="mobileInstructioniPhoneNote"></p>
+      <br/>
+      <div class="divider"></div>
+      <button id="mobileInstructionBtn" class="afterCopyBtn btn"></button>
+      </div>
+    </div>
+
+
+<!-- ********************************* POPUPS END ******************************************* -->
+
+<!-- ********************************* MAIN PAGE END ******************************************* -->
+
+
+<div id="logoWrap"></div>
+
+<a id="backBtn" href="index.html"></a>
+
+<div id="buttonHolder" >
+     <button class="btn" data-clipboard-action="copy" data-clipboard-target="#copySign">Copy signature!</button>
+</div>
+
+<br><br><br>
+
+<div id="left">
+
+    <h2>Personal Info :</h2><br><br>
+    <div id="perInfo">
+      <div id="multiOffice" style="margin:0;">
+        <h3 id="office"></h3>
+        <select id="location" class="div-toggle" data-target=".address">
+        </select>
+      </div>
+      <div id="name"><span id="nameIn">
+        <h3 id="nameLabel"></h3>
+        <input type="text"  id="nameInput" name="nameInput" class="fullInput"></span><br>
+      </div>
+      <div id="position"><span id="positionIn">
+        <h3 id="positionLabel"></h3> <input type="text"  id="positionInput" name="positionInput" class="fullInput"></span><br>
+      </div>
+
+      <div id="inputSections"></div>
+    </div><br>
+    <button id="leftCopyBtn" class="copyBtn btn desktop" data-clipboard-action="copy" data-clipboard-target="#copyInner">Copy signature!</button>
+</div>
+
+<div id="right">
+    <h2>Preview :</h2><br><br>
+    <div id="copySign">
+        <div id="copySafe">
+            <button id="rightCopyBtn" class="copyBtn btn" data-clipboard-action="copy" data-clipboard-target="#copyInner">Click here to copy!</button>
+        </div>
+<!-- ****************************** SIGNATURE STARTS **************************************** -->
+
+        <div id="copyInner"></div>
+
+<!-- ****************************** SIGNATURE ENDS **************************************** -->
+
+    </div>
+</div>
+
+<!-- ****************************** MOBILE SIGNATURE **************************************** -->
+<div class="">
+    <div id="mobileSign" class="hide">
+        <span id="mobileName" ></span>
+        <span id="mobilePosition" ></span>
+        <span id="mobileCompanyName"></span>
+        <span id="mobilePhoneSections" ></span>
+        <span id="mobileWebsite"></span>
+        <span id="mobileDisclaimer" ></span>
+      </div>
+      <!--div id="mobileSign" class="hide">
+          <span id="mobileName" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#004275; font-weight: bold; margin:0px;"></span>
+          <span id="mobilePosition" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#444444; margin:0px;"></span>
+          <span id="mobileCompanyName" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#444444; margin:0px;"></span>
+          <span id="mobilePhoneSections" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#444444; margin:0px;"></span>
+          <span id="mobileWebsite"style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#004275; margin:0px;"></span>
+          <span id="mobileDisclaimer" style="font-family:calibri, arial, sans-serif; font-size:8pt; margin:0px;"></span>
+        </div-->
+        <!--span class="mobileName" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#004275; font-weight:bold; margin:0px;">
+        </span>
+        <br>
+        <span class="mobileTitle"  style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#444444; margin:0px;">
+        </span>
+        <br>
+        <span class="mobileCompany" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#444444; margin:0px;">NATIONAL Public Relations</span>
+        <br>
+        <span class="mobilePhone" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#444444; margin:0px;">
+        </span>
+        <br>
+        <span class="mobileSite" style="font-family:calibri, arial, sans-serif; font-size:11pt; color:#444444; margin:0px;">
+          <a href="http://www.national.ca/default.aspx" title="National PR Website" style="text-decoration:none; color:#004275;">www.national.ca
+          </a>
+        </span>
+        <br>
+        <br>
+        <span class="disclaimer" style="font-family:calibri, arial, sans-serif; font-size:9pt; color:#444444; margin-top:8px;">Unauthorized use of this email is prohibited. To unsubscribe from future commercial electronic messages go to
+          <a href="http://www.national.ca/Subscribe.aspx" target="_blank" title="Unsubscribe from future commercial emails" style="text-decoration:none; color:#004275;">http://www.national.ca/Subscribe.aspx
+          </a>
+        </span-->
+
+    </div>
+
+    <!--div class="hide">
+        <div id="mobileSign">
+            <span class="mobileName"></span><br>
+            <span class="mobilePosition" ></span><br>
+            <span class="mobileCompany">NATIONAL Public Relations</span><br>
+            <span class="mobilePhone" ></span><br>
+            <span class="mobileSite">www.national.ca</span><br><br>
+            <span class="disclaimer">Unauthorized use of this email is prohibited. To unsubscribe from future commercial electronic messages go to http://www.national.ca/Subscribe.aspx</span>
+
+        </div>
+    </div-->
+
+<center><button class="btn mobile" data-clipboard-action="copy" data-clipboard-target="#copyInner">Copy signature!</button></center>
+
+<!-- ********************************* SCRIPTS START ******************************************* -->
+  <script src="scripts/clipboard.min.js"></script>
+  <script>
+    var clipboard = new Clipboard('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script> getLanguage(); </script>
+
+<!-- ********************************* SCRIPTS END ******************************************* -->
+
+</body>
+</html>
